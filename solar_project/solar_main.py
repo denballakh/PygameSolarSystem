@@ -9,6 +9,7 @@ from solar_objects import *
 import thorpy
 import time
 import numpy as np
+import sys
 
 timer = None
 
@@ -27,6 +28,11 @@ time_scale = 1000.0
 
 space_objects = []
 """Список космических объектов."""
+
+# def exception_hook():
+#     pg.quit()
+
+# sys.excepthook = exception_hook()
 
 def execution(delta):
     """Функция исполнения -- выполняется циклически, вызывая обработку всех небесных тел,
@@ -89,7 +95,7 @@ def slider_reaction(event):
 
 def init_ui(screen):
     global browser
-    slider = thorpy.SliderX(100, (-10, 10), "Simulation speed")
+    slider = thorpy.SliderX(200, (-20, 20), "Simulation speed")
     slider.user_func = slider_reaction
     button_stop = thorpy.make_button("Quit", func=stop_execution)
     button_pause = thorpy.make_button("Pause", func=pause_execution)
@@ -161,6 +167,10 @@ def main():
         time.sleep(1.0 / 60)
 
     print('Modelling finished!')
+    pg.quit()
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    finally:
+        pg.quit()
