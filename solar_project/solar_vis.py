@@ -9,7 +9,7 @@ from pygame.draw import *
 Функции, создающие гaрафические объекты и перемещающие их на экране, принимают физические координаты
 """
 
-header_font = "Arial-16"
+header_font = "Consolas"
 """Шрифт в заголовке"""
 
 window_width = 800
@@ -87,4 +87,10 @@ class DrawableObject:
 
     def drawOn(self, surface):
         object_ = self.obj
-        circle(surface, object_.color, (scale_x(object_.x), scale_y(object_.y)), object_.R)
+        if type(object_.color) == tuple:
+            color = pg.Color(*object_.color)
+        elif type(object_.color) == str:
+            color = pg.Color(object_.color)
+        else:
+            color = pg.Color('white')
+        circle(surface, color, (scale_x(object_.x), scale_y(object_.y)), object_.R)

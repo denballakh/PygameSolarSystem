@@ -64,7 +64,7 @@ def parse_star_parameters(line, star):
     star.y = float(tokens[5])
     star.Vx = float(tokens[6])
     star.Vy = float(tokens[7])
-    star.color = (255,255,255) # заглушка
+
 
 
 def parse_planet_parameters(line, planet):
@@ -95,7 +95,6 @@ def parse_planet_parameters(line, planet):
     planet.y = float(tokens[5])
     planet.Vx = float(tokens[6])
     planet.Vy = float(tokens[7])
-    planet.color = (255,255,255) #заглушка
 
 
 def write_space_objects_data_to_file(output_filename, space_objects):

@@ -29,6 +29,9 @@ time_scale = 1000.0
 space_objects = []
 """Список космических объектов."""
 
+FPS = 60
+"""Колчество обновлений в секунду"""
+
 # def exception_hook():
 #     pg.quit()
 
@@ -140,7 +143,8 @@ def main():
     global start_button
     global perform_execution
     global timer
-
+    global FPS
+    
     print('Modelling started!')
     physical_time = 0
 
@@ -164,7 +168,7 @@ def main():
 
         last_time = cur_time
         drawer.update(space_objects, box)
-        time.sleep(1.0 / 60)
+        time.sleep(1.0 / FPS)
 
     print('Modelling finished!')
     pg.quit()
