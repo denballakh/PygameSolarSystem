@@ -1,6 +1,6 @@
 # coding: utf-8
 # license: GPLv3
-
+import io
 from solar_objects import Star, Planet
 from solar_vis import DrawableObject
 
@@ -112,11 +112,10 @@ def write_space_objects_data_to_file(output_filename, space_objects):
 
     **space_objects** — список объектов планет и звёзд
     """
-    with open(output_filename, 'w') as out_file:
-        for obj in space_objects:
-            print(out_file, "%s %d %s %f" % ('1', 2, '3', 4.5))
-            # FIXME!
-
+    with open(output_filename, mode='w', encoding='utf-8') as out_file:
+        for dobj in space_objects:
+            so = dobj.obj
+            out_file.write(f"{so.type} {so.R} {so.color} {so.m} {so.x} {so.y} {so.Vx} {so.Vy}\n")
 
 if __name__ == "__main__":
     print("This module is not for direct call!")
