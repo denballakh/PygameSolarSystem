@@ -182,7 +182,7 @@ def main():
             text = "%d seconds passed" % (int(model_time))
             timer.set_text(text)
 
-        if cur_time - last_update_time > 0.05:
+        if cur_time - last_update_time > 0.01:
             last_update_time = cur_time
             drawer.update(space_objects, box)
 

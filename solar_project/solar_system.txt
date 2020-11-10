@@ -1,26 +1,46 @@
-# Солнечная система
-Star 2 yellow 1.98892E30 0 0 0 0
 
-# Меркурий
-Planet 2 red 3.302E23 57.909E9 0 0 47.87E3
+Planet 2 white 1E25  1E10 0 0 5e2
+Planet 2 white 1E25  2E10 0 0 3e2
+Planet 2 white 1E25  3E10 0 0 3e2
+Planet 2 white 1E25  4E10 0 0 4e2
+Planet 2 white 1E25  5E10 0 0 5e2
+Planet 2 white 1E25  6E10 0 0 6e2
+Planet 2 white 1E25  7E10 0 0 7e2
+Planet 2 white 1E25  8E10 0 0 8e2
+Planet 2 white 1E25  9E10 0 0 9e2
+Planet 2 white 1E25 10E10 0 0 10e2
+Planet 2 white 1E25 11E10 0 0 11e2
+Planet 2 white 1E25 12E10 0 0 12e2
+Planet 2 white 1E25 13E10 0 0 13e2
+Planet 2 white 1E25 14E10 0 0 14e2
+Planet 2 white 1E25 15E10 0 0 15e2
+Planet 2 white 1E25 16E10 0 0 16e2
+Planet 2 white 1E25 17E10 0 0 17e2
+Planet 2 white 1E25 18E10 0 0 18e2
+Planet 2 white 1E25 19E10 0 0 19e2
+Planet 2 white 1E25 20E10 0 0 18e2
 
-# Венера
-Planet 4 orange 4.869E24 108.21E9 0 0 35.02E3
+Planet 2 white 1E25  -1E10 0 0 -5e2
+Planet 2 white 1E25  -2E10 0 0 -3e2
+Planet 2 white 1E25  -3E10 0 0 -3e2
+Planet 2 white 1E25  -4E10 0 0 -4e2
+Planet 2 white 1E25  -5E10 0 0 -5e2
+Planet 2 white 1E25  -6E10 0 0 -6e2
+Planet 2 white 1E25  -7E10 0 0 -7e2
+Planet 2 white 1E25  -8E10 0 0 -8e2
+Planet 2 white 1E25  -9E10 0 0 -9e2
+Planet 2 white 1E25 -10E10 0 0 -10e2
+Planet 2 white 1E25 -11E10 0 0 -11e2
+Planet 2 white 1E25 -12E10 0 0 -12e2
+Planet 2 white 1E25 -13E10 0 0 -13e2
+Planet 2 white 1E25 -14E10 0 0 -14e2
+Planet 2 white 1E25 -15E10 0 0 -15e2
+Planet 2 white 1E25 -16E10 0 0 -16e2
+Planet 2 white 1E25 -17E10 0 0 -17e2
+Planet 2 white 1E25 -18E10 0 0 -18e2
+Planet 2 white 1E25 -19E10 0 0 -19e2
+Planet 2 white 1E25 -20E10 0 0 -18e2
 
-# Земля
-Planet 5 blue 5.974E24 149.60E9 0 0 29.76E3
+Planet 2 red 1E27 0 0 0 1e2
 
-#Марс
-Planet 3 red 6.419E23 227.94E9 0 0 24.13E3
 
-# Юпитер
-Planet 10 orange 1.899E27 778.41E9 0 0 13.07E3
-
-# Сатурн
-Planet 7 yellow 5.685E26 1429.4E9 0 0 9.67E3
-
-# Уран
-Planet 5 blue 8.685E25 2871.0E9 0 0 6.84E3
-
-# Нептун
-Planet 6 blue 1.024E26 4498.3E9 0 0 5.48E3
