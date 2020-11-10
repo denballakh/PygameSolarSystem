@@ -5,6 +5,8 @@ import time
 import numpy as np
 import sys
 
+import tkinter as tk
+import tkinter.filedialog
 import pygame as pg
 import thorpy
 
@@ -12,6 +14,7 @@ import solar_vis as vis
 import solar_model as model
 import solar_input as input
 import solar_objects as objects
+
 
 
 timer = None
@@ -70,6 +73,28 @@ def stop_execution():
     global alive
     alive = False
 
+
+def dialogOpenFile():
+    root = tk.Tk()
+    root.withdraw()
+    fileName = tk.filedialog.Open(root, filetypes = [('*.txt files', '.txt'), ("Все файлы", "*.*")]).show()
+    if fileName == '':
+        return ''
+    if not fileName.endswith(".txt"):
+        fileName += ".txt"
+    return fileName
+
+def dialogSaveFile():
+    root = tk.Tk()
+    root.withdraw()
+    fileName = tk.filedialog.SaveAs(root, filetypes = [('*.txt files', '.txt'), ("Все файлы", "*.*")]).show()
+    if fileName == '':
+        return ''
+    if not fileName.endswith(".txt"):
+        fileName += ".txt"
+    return fileName
+
+
 def open_file():
     """Открывает диалоговое окно выбора имени файла и вызывает
     функцию считывания параметров системы небесных тел из данного файла.
@@ -80,7 +105,7 @@ def open_file():
     global model_time
 
     model_time = 0.0
-    in_filename = "solar_system.txt"
+    in_filename = dialogOpenFile()
     space_objects = input.read_space_objects_data_from_file(in_filename)
     max_distance = max([max(abs(obj.obj.x), abs(obj.obj.y)) for obj in space_objects])
     vis.calculate_scale_factor(max_distance)
@@ -92,7 +117,7 @@ def save_file():
     global browser
     global model_time
 
-    out_filename = "solar_system_out.txt"
+    out_filename = dialogSaveFile()
     input.write_space_objects_data_to_file(out_filename, space_objects)
 
 def handle_events(events, menu):

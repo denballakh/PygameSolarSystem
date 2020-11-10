@@ -56,9 +56,9 @@ def parse_star_parameters(line, star):
 
     tokens = line.split()
     if tokens[0].lower() != 'star':
-		return
+        return
     if len(tokens) != 8:
-		return
+        return
     star.R = int(tokens[1])
     star.color = tokens[2]
     star.m = float(tokens[3])
@@ -89,9 +89,9 @@ def parse_planet_parameters(line, planet):
     """
     tokens = line.split()
     if tokens[0].lower() != 'planet':
-		return
+        return
     if len(tokens) != 8:
-		return
+        return
     planet.R = int(tokens[1])
     planet.color = tokens[2]
     planet.m = float(tokens[3])
